@@ -81,25 +81,24 @@ jQuery.getJSON('http://freegeoip.net/json/?callback=?', function(location) {
         </form>
       </section> <!-- /.span6 -->
       </div>
+      <section id="nav" class="row">
+        <div class="wrapper">
+          <div class="span12">
+            <nav class="main">
+            {% include 'simple_dropdown' %}
+            </nav> <!-- /.main -->
+            {% include 'mobile-menu' %}
+          </div> <!-- /.span12 -->
+        </div>
+      </section> <!-- /.row -->
     </header> <!-- /#header.row -->
 
-    <section id="nav" class="row">
-      <div class="wrapper">
-        <div class="span12">
-          <nav class="main">
-          {% include 'simple_dropdown' %}
-          </nav> <!-- /.main -->
-          {% include 'mobile-menu' %}
-        </div> <!-- /.span12 -->
-      </div>
-    </section> <!-- /.row -->
-
-  <div class="wrapper">
 
 
 
     <section id="body">
       {% if template == "index" and settings.display_slideshow %}
+      <div class="wrapper">
       <section id="slideshow" class="row">
         <div class="span12 slideshow">
           <div class="flexslider">
@@ -118,6 +117,7 @@ jQuery.getJSON('http://freegeoip.net/json/?callback=?', function(location) {
           <div class="custom-flexslider-controls"></div> <!-- /.custom-flexslider-controls -->
         </div> <!-- /.span12.slideshow -->
       </section> <!-- /#slideshow.row -->
+      </div> <!-- /.wrapper -->      
       {% endif %}
       
       {% if template == 'list-collections' %}
@@ -127,6 +127,7 @@ jQuery.getJSON('http://freegeoip.net/json/?callback=?', function(location) {
       {% endif %}
     </section> <!-- /#body -->
 
+  <div class="wrapper">
     <footer id="footer">
       {% if settings.footer_display_about_us or settings.footer_display_contact_us or settings.footer_display_newsletter %}
       <div class="row footer-columns">
