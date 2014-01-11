@@ -4,6 +4,7 @@
 <!--[if IE 8]><html class="no-js ie8 oldie" lang="en"><![endif]-->
 <!--[if gt IE 8]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
+  <meta name="google-site-verification" content="nKLY5HOky0AWPlud4ur224p2UuFmruptbTiM5TwYTIY" />
 
 
 
@@ -64,7 +65,7 @@ jQuery.getJSON('http://freegeoip.net/json/?callback=?', function(location) {
 <body>
     <header id="header" class="row">
       <div class="wrapper">
-        <div class="span5 clearfix">
+        <div class="span9 clearfix">
           <div class="logo">
             {% if settings.use_logo %}
             <a href="/"><img src="{{ 'logo.png' | asset_url }}" alt="{{ shop.name }}" /></a>
@@ -72,8 +73,14 @@ jQuery.getJSON('http://freegeoip.net/json/?callback=?', function(location) {
             <h1><a href="/">{{ shop.name }}</a></h1>
             {% endif %}
           </div> <!-- /.logo -->
+          <div class="menu-bar">
+              <ul class="menu" id="menu-top">
+                <li class="menu-item"><a href="http://contour.com">Products</a></li>
+                <li class="menu-item"><a href="http://help.contour.com">Support</a></li>
+            </ul>
+          </div>
         </div> <!-- /.span5 -->
-        <section class="fr span6 searchform">
+        <section class="fr span3 searchform">
         <form id="search_form" name="search" action="/search" class="clearfix">
           <input type="hidden" name="type" value="product" />
           <input type="submit" value="Go" class="submit" />
