@@ -50,7 +50,7 @@
 
 <script>
 jQuery.getJSON('http://freegeoip.net/json/?callback=?', function(location) {
-  if( location.country_code != "US" or "CA"){
+  if( (location.country_code != "US") && (location.country_code != "CA") ){
     $('#hidePrice').hide();
     $('#hideBuy').hide();
     $('.price').hide();
