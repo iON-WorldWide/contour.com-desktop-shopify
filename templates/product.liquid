@@ -91,7 +91,7 @@
           <div class="purchase-section{% if product.variants.size > 1 %} multiple{% endif %}">
           <div class="purchase">
             {% unless product.available %}
-            <p>Sold Out</p>
+            <p>Temporarily Sold Out</p>
             {% else %}            
             {% endunless %}
           <input type="submit" class="btn" name="add" id="add-item-to-cart" value="Add to cart">
